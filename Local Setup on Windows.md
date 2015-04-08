@@ -38,7 +38,7 @@ feel free to create a setup that works best for you.
 - 2 vCPU
 - 10GB HDD (check SSD if needed)
 - CD linked to the downloaded **ubuntu-14.04.2-server-amd64.iso** image
-- Bridged networking with the correct network adapter (or Host-only networking, but not NAT).  
+- Bridged networking with the correct network adapter (or Host-only networking, but **not NAT**).  
 Note that you might have to re-select the network adapter if you switch between wired / wireless.  
 Also, Bridge networking will expose your Ubuntu VM to the local network - depending on your
 environment, use it with care.
@@ -46,8 +46,8 @@ environment, use it with care.
 
 2) Install Ubuntu Server with default settings
 
-- hostname: [your choice] (something unique since many others will have the same setup)
-- username: ubuntu (this is what EC2 uses)
+- hostname: [your choice] something unique since many others will have the same setup
+- username: ubuntu (this is what Amazon EC2 uses)
 - password: [your choice]
 - do not encrypt your home directory (this is just a test machine)
 - partition: Guided - use entire disk (this is just a test machine)
@@ -109,7 +109,7 @@ $ exit
   * save session settings (optional)
 - test the connection
 
-From now on, we will not be using the password to make a connection to Ubuntu VM.
+From now on, we will not be using the password to make a connection to the Ubuntu VM.
 
 
 6) Install Ubuntu updates and **R**
@@ -125,7 +125,8 @@ $ sudo apt-get dist-upgrade
 ```
 $ sudo vi /etc/apt/sources.list
 ```
-add the following line at the end (use command **i**)
+
+- add the following line at the end (use command **i**)
 ```
 deb http://cran.rstudio.com/bin/linux/ubuntu trusty/
 ```
