@@ -2,7 +2,7 @@
 
 ## Instructions for a Local Setup: Windows host / Ubuntu guest
 
-#### Test Setup
+#### Test Hardware & Software
 
 The following setup was used for testing purposes. Compare it with your setup and make
 adjustments as necessary.
@@ -27,9 +27,11 @@ https://www.virtualbox.org/wiki/Downloads
 http://www.ubuntu.com/download/server
 
 
+#### Setup
+
 Some of the instructions might be too detailed / obvious - feel free to create a setup that works best for you.
 
-1) Create an Ubuntu 64 bit VM with:
+1) On Virtual Box, create an Ubuntu 64 bit VM with:
 
 - 4GB memory
 - 2 vCPU
@@ -149,4 +151,4 @@ $ R
 > q()
 ```
 
-#### If successful, you have completed the steps needed for the local setup on a Windows host.
+**If successful, you have completed the steps needed for the local setup on a Windows host.**
