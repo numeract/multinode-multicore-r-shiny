@@ -1,6 +1,6 @@
 # Multi-node Multi-core R / Shiny
 
-## Instructions for a Local Setup: Windows master / Ubuntu slave
+## Instructions for a Local Setup: Windows host / Ubuntu guest
 
 #### Test Setup
 
@@ -8,7 +8,7 @@ The following setup was used for testing purposes. Compare it with your setup an
 adjustments as necessary.
 
 - Host: Windows 7 with a hyper-threaded quad-core and 24 GB RAM 
-(minimum needed for this experiment 4 virtual CPUs and 8GB RAM)
+(minimum needed for this experiment: 4 virtual CPUs and 8GB RAM)
 
 - **R 3.1.3** and **RStudio** installed on the Windows host. Download them from  
 http://cran.rstudio.com/  
@@ -16,7 +16,7 @@ http://www.rstudio.com/products/rstudio/download/
 
 - **PuTTY**, **Plink**, **PuTTYgen**  
 http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html  
-Any other SSH client for Windows should do, but they are not covered here.  
+Any other SSH client for Windows should do, but they are not covered here (links provided for convenience).
 MobaXterm: http://mobaxterm.mobatek.net/  
 Cygwin: https://www.cygwin.com/
 
@@ -27,10 +27,7 @@ https://www.virtualbox.org/wiki/Downloads
 http://www.ubuntu.com/download/server
 
 
-#### Goal: create an **R** cluster on the local computer using 2 vCPUs on Windows and 2 vCPUs on Ubuntu
-
-Some of the instructions might be too detailed / obvious - 
-feel free to create a setup that works best for you.
+Some of the instructions might be too detailed / obvious - feel free to create a setup that works best for you.
 
 1) Create an Ubuntu 64 bit VM with:
 
@@ -92,7 +89,7 @@ $ chmod 700 ~/.ssh
 $ vi ~/.ssh/authorized_keys
 ```
 - on Windows, from the **puttygen.exe** window (top box), copy (Ctrl-V) the Public Key
-- go to back the **PuTTY** window where **vi** is open
+- go back to the **PuTTY** window where **vi** is open
 - switch to insert mode (command **i**)
 - paste (Shift-Insert) the key into **vi**
 - save and close **vi** using the command sequence **ESC**, **:w** and **:q**
@@ -152,4 +149,4 @@ $ R
 > q()
 ```
 
-#### If successful, you have completed the steps needed for the local setup.
+#### If successful, you have completed the steps needed for the local setup on a Windows host.
