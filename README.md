@@ -42,4 +42,3 @@ See slides, detailed instructions to follow.
 - 2015-04-12 : updated slides, this readme
 - 2015-04-11 : slides and code, AWS AMIs (see slides)
 - 2015-04-08 : initial commit for the local setup
-
